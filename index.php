@@ -56,8 +56,8 @@
         <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
           <div class="image-links">
             <img class="img-fluid" src="img/service_01.jpg">
-            <div class="row no-gutters">
-              <div class="col-8 offset-2 col-md-10 offset-md-1 image-info pt-4">
+            <div class="row justify-content-center">
+              <div class="col-8  col-md-10  image-info pt-4">
                 <h3 class="text-center text-uppercase"><span class="text-lowercase">Learn More</span> About Us</h3>
                 <a href="#" class="btn btn-success text-uppercase btn-block mt-4">Read More</a>
               </div>
@@ -68,8 +68,8 @@
         <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
           <div class="image-links">
             <img class="img-fluid" src="img/service_02.jpg">
-            <div class="row no-gutters">
-              <div class="col-8 offset-2 col-md-10 offset-md-1 image-info pt-4">
+            <div class="row justify-content-center">
+              <div class="col-8  col-md-10  image-info pt-4">
                 <h3 class="text-center text-uppercase"><span class="text-lowercase">About our</span> Service</h3>
                 <a href="#" class="btn btn-success text-uppercase btn-block mt-4">Read More</a>
               </div>
@@ -80,8 +80,8 @@
         <div class="col-md-4 col-12 text-center mb-4 mb-md-0">
           <div class="image-links">
             <img class="img-fluid" src="img/service_03.jpg">
-            <div class="row no-gutters">
-              <div class="col-8 offset-2 col-md-10 offset-md-1 image-info pt-4">
+            <div class="row justify-content-center">
+              <div class="col-8  col-md-10  image-info pt-4">
                 <h3 class="text-center text-uppercase"><span class="text-lowercase">Visit our</span> Store</h3>
                 <a href="#" class="btn btn-success text-uppercase btn-block mt-4">Read More</a>
               </div>
@@ -107,72 +107,56 @@
       
     </div>
     <div class="container products py-5 ">
-      <h2 class="text-center text-uppercase"><span class="text-lowercase">Checkout our</span> wproducts</h2>
+      <h2 class="text-center text-uppercase"><span class="text-lowercase">Checkout our</span> productss</h2>
       <div class="row py-4">
-        <div class="col-6 col-md-3 mb-5 mb-md-0">
-          <div class="card">
-            <a href="#">
-              <img src="img/product_thumb_01.jpg" class="card-img-top img-fluid">
-              <div class="card-block">
-                <h3 class="card-title text-center text-uppercase mb-0">Product 1</h3>
-                <p class="card-text text-center text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <p class="price text-center mb-0">25€</p>
-              </div>
-            </a>
-          </div>
-        </div>
+            
+           <?php
+                try {
+                  require_once 'inc/db.php';
+                  $sql = 'SELECT `id`, `name`, `image_thumb`, `price`,`short_description` FROM `products` LIMIT 4';
+                  $result = $db->query($sql);
+                } catch (Exception $e) {
+                  $error = $e->getMessage();
+                }
 
-        <div class="col-6 col-md-3">
-          <div class="card">
-            <a href="#">
-              <img src="img/product_thumb_02.jpg" class="card-img-top img-fluid">
-              <div class="card-block">
-                <h3 class="card-title text-center text-uppercase mb-0">Product 2</h3>
-                <p class="card-text text-center text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <p class="price text-center mb-0">25€</p>
-              </div>
-            </a>
-          </div>
-        </div>
+                $rows = $result->num_rows;
 
-        <div class="col-6 col-md-3">
+                if(!$rows) {
+                  echo "No Results Found";
+                } else {
+                  while($products = $result->fetch_assoc()) { ?>
+                    <div class="col-6 col-md-3 mb-5 mb-md-0">
           <div class="card">
-            <a href="#">
-              <img src="img/product_thumb_03.jpg" class="card-img-top img-fluid">
+            <a href="product.php?product=<?php echo $products['id']; ?>">
+              <img src="img/<?php echo $products['image_thumb']; ?>" class="card-img-top img-fluid">
               <div class="card-block">
-                <h3 class="card-title text-center text-uppercase mb-0">Product 3</h3>
-                <p class="card-text text-center text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <p class="price text-center mb-0">25€</p>
+                <h3 class="card-title text-center text-uppercase mb-0"><?php echo $products['name']; ?></h3>
+                <p class="card-text text-center text-uppercase"><?php echo $products['short_description']; ?>
+                <p class="price text-center mb-0"><?php echo $products['price']; ?></p>
               </div>
             </a>
           </div>
         </div>
+        <?php 
+          }
+        }  
+           
 
-        <div class="col-6 col-md-3">
-          <div class="card">
-            <a href="#">
-              <img src="img/product_thumb_04.jpg" class="card-img-top img-fluid">
-              <div class="card-block">
-                <h3 class="card-title text-center text-uppercase mb-0">Product 4</h3>
-                <p class="card-text text-center text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <p class="price text-center mb-0">25€</p>
-              </div>
-            </a>
-          </div>
-        </div>
+
+        
+
+       
+        $db->close();
+
+        ?>
+
       </div>
     </div>
 
-    <div class="container-fluid appointment py-5">
-      <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 py-3 text-center">
-          <h3 class="text-uppercase">Make an appointment</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-          <a href="#" class="btn btn-primary btn-lg mt-3 text-uppercase">Read More</a>
-        </div>
-      </div>
-    </div>
+        
+   
 
 <?php
+    include 'templates/appointment.php';
     include 'templates/footer.php';
 ?>   

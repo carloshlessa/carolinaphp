@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Italianno|Lato:400,700,900|Raleway:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -12,8 +12,8 @@
   </head>
   <body>
     <header class="site-header container">
-      <div class="row justify-content-between">
-        <div class="col-8 offset-2 col-lg-4 offset-lg-0">
+      <div class="row justify-content-center justify-content-lg-between">
+        <div class="col-8 col-lg-4 ">
           <a href="index.php">
               <img src="img/logo.svg" alt="logo carolina" class="img-fluid mx-auto d-block">
           </a>

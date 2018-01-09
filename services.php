@@ -28,7 +28,7 @@
 					</div>
 					<div id="service_1desc" class="collapse show" role="tabpanel" aria-labelledby="service_1">
 						<div class="card-block">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
 						</div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 					</div>
 					<div id="service_2desc" class="collapse" role="tabpanel" aria-labelledby="service_2">
 						<div class="card-block">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
 						</div>
 					</div>
 				</div>
@@ -54,16 +54,23 @@
 					</div>
 					<div id="service_3desc" class="collapse" role="tabpanel" aria-labelledby="service_3">
 						<div class="card-block">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
 						</div>
 					</div>
 				</div>
 				
 			</div>
 		</main>
-		<aside class="col-lg-4 pt-4 pt-lg-0">
-            <div class="sidebar hours p-3">
-                
+		<aside class="col-lg-4 pt-4 pt-lg-0 discount">
+            <div class="p-3">
+                <h3 class=" text-center text-uppercase mt-4">First Time Customers</h3>
+                <p class="lead text-center mt-4">Get 20% off in any service, with this coupon:</p>
+                <div class="coupon p-1">
+                	<p class="text-center text-uppercase">
+                		<span class="display-4 pt-3">20% off</span>in any services
+                	</p>
+                	
+                </div>
             </div>
         </aside>
 	</div>
@@ -71,5 +78,6 @@
 
 
 <?php
+    include 'templates/appointment.php';
     include 'templates/footer.php';
-?> 
+?>   
